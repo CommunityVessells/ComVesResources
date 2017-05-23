@@ -14,7 +14,25 @@ p {font-size: 1.4em !important;}
 #lowercse {
   text-transform: capitalize;
 }
+#disclaimer {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -webkit-transition: opacity .50s ease-in-out;
+  -moz-transition: opacity .50s ease-in-out;
+  -ms-transition: opacity .50s ease-in-out;
+  -o-transition: opacity .50s ease-in-out;
+  transition: opacity .50s ease-in-out;
+}
 
+#disclaimer:hover{
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  -webkit-transition: opacity .50s ease-in-out;
+  -moz-transition: opacity .50s ease-in-out;
+  -ms-transition: opacity .50s ease-in-out;
+  -o-transition: opacity .50s ease-in-out;
+  transition: opacity .50s ease-in-out;
+}
 #footer {
   padding-top: 1em;
 }
