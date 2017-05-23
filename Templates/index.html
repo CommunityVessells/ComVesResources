@@ -28,13 +28,75 @@
 	<link rel="stylesheet" type="text/css" href="css/palette.css">
 	<link rel="stylesheet" type="text/css" href="css/text.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- Captcha -->
+	<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
 
-<body>
+<body id="comVessells" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<!-- Sign Up Modal -->
+	<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3 class="modal-title">Sign Up</h3>
+				</div>
+				<div class="modal-body">
+					<!--form start-->
+					<form class="form-horizontal">
+						<fieldset>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+							</div>
+						</div>
+						<div class="form-group"  >
+							<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+							<div class="col-sm-10">
+								<input type="password" class="form-control" id="inputPassword3" placeholder="Password" required>
+							</div>
+						</div>
+						<div class="form-group">
+					      <label class="col-md-2 control-label"></label>
+
+					      <div class="col-md-10">
+					        <div class="radio radio-primary">
+					          <label>
+					            <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio">
+					            I am a Volunteer
+					          </label>
+					        </div>
+					        <div class="radio radio-primary">
+					          <label>
+					            <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+					            I am an Organization
+					          </label>
+					        </div>
+					      </div>
+
+					    </div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-md-10">
+								<button type="submit" class="btn btn-primary">Sign Up</button>
+								<button type="reset" class="btn btn-default">Reset</button>
+							</div>
+						</div>
+					</fieldset>
+					</form>
+					<!--form end-->
+				</div>
+				<div class="modal-footer">
+			         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+			  </div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 	<!-- Navbar start -->
 	<div class="navbar dark-primary-color navbar-fixed-top">
 	  <div class="container-fluid">
@@ -48,7 +110,7 @@
 	    </div>
 	    <div class="navbar-collapse collapse navbar-inverse-collapse">
 	      <ul class="nav navbar-nav">
-	        <li class="hover-ul"><a href="#Signup">Sign Up</a></li>
+	        <li class="hover-ul"><a href="#signUpModal" data-toggle="modal">Sign Up</a></li>
 	        <li class="hover-ul"><a href="#Purpose">Purpose</a></li>
 					<li class="hover-ul"><a href="javascript:void(0)">Requests</a></li>
 					<li class="hover-ul"><a href="javascript:void(0)">Contact</a></li>
@@ -74,18 +136,20 @@
   </div>
 </div>
 </div>
+
 <!-- carousel -->
+<!--
 <div class="container-fluid"  id="Slider">
 	<h2 id="logo-small" class="text-accent-color text-center">New &amp; Upcoming Events</h2>
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
- <!-- Indicators -->
+ <!-- Indicators --><!--
  <ol class="carousel-indicators">
 	 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 	 <li data-target="#myCarousel" data-slide-to="1"></li>
 	 <li data-target="#myCarousel" data-slide-to="2"></li>
  </ol>
 
- <!-- Wrapper for slides -->
+ <!-- Wrapper for slides --><!--
  <div class="carousel-inner" role="listbox">
 	 <div class="item active">
 	 <h4 class="primary-text-color">Collecting 1000 Painkillers &amp; Analgesics<img class="img-responsive img-rounded center-block" src="../Images/medicine1_560_360_c1.jpg" alt="request1"></h4>
@@ -98,7 +162,7 @@
 	 </div>
  </div>
 
- <!-- Left and right controls -->
+ <!-- Left and right controls --><!--
  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 	 <i class="material-icons">skip_previous</i>
 	 <span class="sr-only">Previous</span>
@@ -111,11 +175,11 @@
 </div>
 <!-- purpose -->
 <div class="container-fluid"  id="Purpose">
-	<div><i class="fa fa-heartbeat fa-5x pull-right text-accent-color" aria-hidden="true"></i>
+	<div><i class="fa fa-heartbeat fa-5x pull-right text-accent-color slideanim" aria-hidden="true"></i>
   <h1 id="purpose" class="primary-text-color">Our Mission:</h1>
 	<p class="primary-text-color">To create a platform ,for different and diverse organizations, to optimize their logistics for the purpose of gathering and distributing food , pharmaceutical &amp; material aid , allow volunteers to contribute specific amounts of products based on  calculated needs of the organizations and help them achieve their goals on their charity work and humanitarian projects.</p>
 	<hr class="divider-color">
-	<h1 id="purpose" class="primary-text-color"><small>How it Works 	<i class="fa fa-cog fa-spin fa-2x fa-fw"></i>
+	<h1 id="purpose" class="primary-text-color slideanim"><small>How it Works 	<i class="fa fa-cog fa-spin fa-2x fa-fw"></i>
 		<span class="sr-only"></span></small></h1>
 
 	<p  class="primary-text-color">The Community Vessells Platform works on a basis of <em>&quot;requests&quot;</em> issued by the participating organizations. Each volunteer can sign-in and declare his/her interest in participating on a specific request.The <strong>contributions system</strong> ,unobtrusively, obliges each volunteer to commit to a number of deliverable items per request as a <em>&quot;promise to keep&quot;.</em></p>
@@ -123,11 +187,13 @@
 
 </div>
 </div>
-<div class="container-fluid"  id="Signup">
-<div class="well accent-color">
-	<h2 id="logo-small" class="text-primary-color text-center">Join The Cause and Contribute to Your Community! </h2>
+<div class="container main slideanim"  id="Signup">
+<button id="lowercse" class="btn btn-raised btn-block text-center accent-color" type="button" data-toggle="modal" data-target="#signUpModal">
+	<h2 id="logo-small" class="text-primary-color text-center">Join The Cause</h2></button>
+
+
 </div>
-</div>
+
 </div>
 
 
@@ -136,7 +202,7 @@
 
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 <script src="../node_modules/bootstrap-material-design/dist/js/material.min.js"></script>
 <script src="../node_modules/bootstrap-material-design/dist/js/ripples.min.js"></script>
 <script>
@@ -162,6 +228,49 @@
       }
     });
   });
+</script>
+
+<!-- Smooth Scrolling -->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#comVessells']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+<!--Animate objects  -->
+<script>
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
 </script>
 </body>
 </html>
