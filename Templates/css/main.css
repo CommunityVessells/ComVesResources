@@ -14,6 +14,11 @@ p {font-size: 1.4em !important;}
 #lowercse {
   text-transform: capitalize;
 }
+
+#footer {
+  padding-top: 1em;
+}
+
 .carousel-control.right, .carousel-control.left {
     background-image: none;
     color: #f4511e;
